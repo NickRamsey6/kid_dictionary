@@ -27,7 +27,6 @@ post('/') do
   new_word = params[:term]
   term = Term::Word.new({:term => new_word})
   term.create
-  binding.pry
   @terms = Term::Word.all
   erb(:index)
 end
@@ -43,6 +42,10 @@ patch('/terms/:id') do
   erb(:word)
 end
 
-delete('/words/:id') do
-  "Will delete words"
+delete('/terms/:id') do
+  @term = Term::Word.find(params[:id].to_i())
+  @term.delete()
+  @terms = Term::Word.all
+  redirect to('/')
+  erb(:index)
 end
