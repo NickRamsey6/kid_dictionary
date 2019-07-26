@@ -5,9 +5,9 @@ require ('pry')
 also_reload ('lib/**/*.rb')
 
 get ('/') do
-  # @terms = Term::Word.all
-  # erb(:index)
-  "Home page with a list of words (aka Terms)"
+  @terms = Term::Word.all
+  erb(:index)
+  # "Home page with a list of words (aka Terms)"
 end
 
 get('/words') do

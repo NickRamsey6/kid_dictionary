@@ -1,0 +1,16 @@
+<h1>Kid's Dictionary</h1>
+
+<h3>Words</h3>
+
+<% if @terms.any? %>
+  <ul>
+    <% @terms.each do |term| %>
+      <li><a href "/words/<%= word.id %>"<%= word.term %></a></li>
+  <% end %>
+</ul>
+
+<% else %>
+  <p>There are currently no words</p>
+<% end %>
+
+<a href="words/new">Add a Word</a>
