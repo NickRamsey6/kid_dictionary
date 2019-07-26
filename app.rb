@@ -32,13 +32,15 @@ post('/') do
   erb(:index)
 end
 
-get('/words/:id/edit') do
+get('/terms/:id/edit') do
   @term = Term::Word.find(params[:id].to_i())
   erb(:edit_word)
 end
 
-patch('/words/:id') do
-  "Will update words"
+patch('/terms/:id') do
+  @term = Term::Word.find(params[:id].to_i())
+  @term.edit(params[:term])
+  erb(:word)
 end
 
 delete('/words/:id') do
