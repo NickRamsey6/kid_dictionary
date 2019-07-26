@@ -10,20 +10,24 @@ get ('/') do
   # "Home page with a list of words (aka Terms)"
 end
 
-get('/words') do
+get('/terms') do
   "Page with a list of words - should this just be home?"
 end
 
-get('/words/new') do
-  "Page to add new words"
+get('/terms/new') do
+  erb(:word_new)
 end
 
-get('/words/:id') do
+get('/terms/:id') do
   "Page for a specific word based off its ID #{params[:id]}"
 end
 
-post('/words') do
-  "Add words to our word list"
+post('/') do
+  new_word = params[:term]
+  term = Term::Word.new({:term => new_word})
+  term.create
+  @terms = Term::Word.all
+  erb(:index)
 end
 
 get('/words/:id/edit') do
