@@ -66,8 +66,8 @@ module Define
       @@definitions.delete(self.id)
     end
 
-    def edit(term)
-      @@definitions.definition = definition
+    def edit(definition)
+      self.definition = definition
     end
 
     def term

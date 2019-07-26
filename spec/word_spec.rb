@@ -44,7 +44,7 @@ describe('#Define') do
 
   describe('.create') do
     it('creates a new definition') do
-      test_def = Define::Word.new(:definition =>'as much food as one man can hold', :term_id => "1")
+      test_def = Define::Word.new(:definition =>'as much food as one man can hold', :term_id => '1')
       test_def.create
       @definitions = Define::Word.all
       expect(@definitions).to(eq([test_def]))
@@ -53,7 +53,7 @@ describe('#Define') do
 
   describe('.delete') do
     it('deletes a created word') do
-      test_def = Define::Word.new(:definition =>'as much food as one man can hold', :term_id => "1")
+      test_def = Define::Word.new(:definition =>'as much food as one man can hold', :term_id => '1')
       test_def.create
       test_def.delete
       @definitions = Define::Word.all
@@ -63,7 +63,7 @@ describe('#Define') do
 
   describe('.edit') do
     it('edits a created word') do
-      test_def = Define::Word.new(:definition =>'as much food as one man can hold', :term_id => "1")
+      test_def = Define::Word.new(:definition =>'as much food as one man can hold', :term_id => '1')
       test_def.create
       test_def.edit('the meal between breakfast and dinner')
       expect(test_def.definition).to(eq('the meal between breakfast and dinner'))
