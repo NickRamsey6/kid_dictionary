@@ -32,6 +32,10 @@ module Term
     def edit(term)
       self.term = term
     end
+
+    def self.find(id)
+      @@words[id]
+    end
   end
 end
 

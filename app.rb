@@ -19,19 +19,22 @@ get('/terms/new') do
 end
 
 get('/terms/:id') do
-  "Page for a specific word based off its ID #{params[:id]}"
+  @term = Term::Word.find(params[:id].to_i())
+  erb(:word)
 end
 
 post('/') do
   new_word = params[:term]
   term = Term::Word.new({:term => new_word})
   term.create
+  binding.pry
   @terms = Term::Word.all
   erb(:index)
 end
 
 get('/words/:id/edit') do
-  "Page to edit a word based on ID #{params[:id]}"
+  @term = Term::Word.find(params[:id].to_i())
+  erb(:edit_word)
 end
 
 patch('/words/:id') do

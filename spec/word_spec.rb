@@ -35,6 +35,14 @@ describe('#Term') do
     end
   end
 
+  # describe('.find') do
+  #   it('find a word by id') do
+  #     test_word = Term::Word.new(:term =>'word')
+  #     test_word.create
+  #     @list_of_words = Term::Word.find('')
+  #     expect(@list_of_words.id).to(eq(1))
+  #   end
+  # end
 end
 
 describe('#Define') do

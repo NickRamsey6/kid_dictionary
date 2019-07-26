@@ -1,0 +1,18 @@
+<h4>Term: <%= @term.term %></h4>
+
+<h3>Definition:</h3>
+
+
+
+  <h4>Add a Defintion:</h4>
+
+  <form action="/terms/<%= @term.id %>/definition" method="post">
+  <div class="form-group">
+    <label for="body">Definition:</label>
+    <textarea name="body" rows="8" cols="80" class="form-control"></textarea>
+  </div>
+  <button type="submit" class="btn">Define!</button>
+</form>
+
+<p><a href="/terms/<%= @term.id %>/edit">Edit Term</a></p>
+<a href="/">Return to term list</a>

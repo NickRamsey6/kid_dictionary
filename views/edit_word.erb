@@ -1,0 +1,18 @@
+<h1>Update <%= @term.term() %></h1>
+
+<form action="/terms/<%= @term.id() %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+
+  <label for="name">Edit Term</label>
+  <input id="term" name="term" type="text" value="<%= @term.term %>">
+
+  <button type="submit">Update</button>
+</form>
+
+<p><a href="/">Return to Word List</a></p>
+
+<form action="/terms/<%= @term.id() %>" method="post">
+  <input name="_method" type="hidden" value="delete">
+
+  <button type="submit">Delete term</button>
+</form>
