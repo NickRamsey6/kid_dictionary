@@ -36,6 +36,10 @@ module Term
     def self.find(id)
       @@words[id]
     end
+
+    def definitions
+      Define::Word.find_by_term(self.id)
+    end
   end
 end
 
@@ -75,7 +79,7 @@ module Define
     end
 
     def term
-      term.find(self.term_id)
+      Term.find(self.term_id)
     end
 
     def self.find_by_term(id)

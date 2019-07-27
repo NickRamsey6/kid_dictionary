@@ -60,7 +60,7 @@ describe('#Define') do
   end
 
   describe('.delete') do
-    it('deletes a created word') do
+    it('deletes a definition') do
       test_def = Define::Word.new(:definition =>'as much food as one man can hold', :term_id => '1')
       test_def.create
       test_def.delete
@@ -70,7 +70,7 @@ describe('#Define') do
   end
 
   describe('.edit') do
-    it('edits a created word') do
+    it('edits a definition') do
       test_def = Define::Word.new(:definition =>'as much food as one man can hold', :term_id => '1')
       test_def.create
       test_def.edit('the meal between breakfast and dinner')

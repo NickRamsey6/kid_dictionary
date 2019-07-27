@@ -10,9 +10,9 @@ get ('/') do
   # "Home page with a list of words (aka Terms)"
 end
 
-get('/terms') do
-  "Page with a list of words - should this just be home?"
-end
+# get('/terms') do
+#   "Page with a list of words - should this just be home?"
+# end
 
 get('/terms/new') do
   erb(:word_new)
@@ -48,4 +48,13 @@ delete('/terms/:id') do
   @terms = Term::Word.all
   redirect to('/')
   erb(:index)
+end
+
+post ('/terms/:id/definitions') do
+  @term = Term::Word.find(params[:id].to_i())
+  definition = Define::Word.new({:definition => params[:definition], :term_id => @term.id})
+  binding.pry
+  definition.create
+  # redirect to('/terms/:id/edit')
+  erb(:word)
 end
