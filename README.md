@@ -6,11 +6,11 @@
 
 ## Description
 
-_For my second Ruby code review, I am building an application that allows users to enter and define their own words. Once a word is created, users can retrieve a list of words and edit/delete words or their definitions._
+_For my second Ruby code review, I am building an application that allows users to enter and define their own words. Once a word is created, users can retrieve a list of words and edit/delete words or their definitions. Check us out on <a href="https://frozen-tundra-93129.herokuapp.com/">Heroku</a>!_
 
 ## Setup/Installation Requirements -- UPDATE
 
-* _Try out the app on Heroku!: <a href="https://frozen-tundra-93129.herokuapp.com/">Heroku Link</a>_
+* _Try out the app on Heroku! <a href="https://frozen-tundra-93129.herokuapp.com/">Heroku Link</a>_
 * _Visit my git hub repository: <a href="https://github.com/NickRamsey6/kid_dictionary">GitHub Repo</a>_
 * _Click the site link_
 * _Explore_
