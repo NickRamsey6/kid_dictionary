@@ -10,16 +10,16 @@ _For my second Ruby code review, I am building an application that allows users 
 
 ## Setup/Installation Requirements -- UPDATE
 
+* _Try out the app on Heroku!: <a href="https://frozen-tundra-93129.herokuapp.com/">Heroku Link</a>_
 * _Visit my git hub repository: <a href="https://github.com/NickRamsey6/kid_dictionary">GitHub Repo</a>_
 * _Click the site link_
 * _Explore_
 * _Clone the repo_
-* _git clone https://github.com/NickRamsey6/doc-lookup _
+* _git clone https://github.com/NickRamsey6/kid_dictionary _
 * _bundle install_
-* _Heroku Link:_
 
 
-## Specs (Initial, May Change)
+## Specs
 
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
