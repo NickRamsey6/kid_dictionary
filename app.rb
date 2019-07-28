@@ -50,11 +50,22 @@ delete('/terms/:id') do
   erb(:index)
 end
 
+get('/terms/:id/definitions/:definition_id') do
+  @definition = Define::Word.find(params[:definition_id].to_i())
+  erb(:definition)
+end
+
+
 post ('/terms/:id/definitions') do
   @term = Term::Word.find(params[:id].to_i())
   definition = Define::Word.new({:definition => params[:definition], :term_id => @term.id})
-  binding.pry
   definition.create
-  # redirect to('/terms/:id/edit')
   erb(:word)
+end
+
+patch('/terms/:id/definitions/definition_id') do
+  @term = Term::Word.find(params[:id].to_i())
+  definition = Define::Word.find(params[:id].to_i())
+  definition.update(params[:definition])
+  erb(:definition)
 end

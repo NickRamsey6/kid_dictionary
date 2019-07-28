@@ -66,6 +66,10 @@ module Define
       @@total_rows = 0
     end
 
+    def self.find(id)
+      @@definitions[id]
+    end
+
     def create
       @@definitions[self.id] = self
     end
@@ -79,7 +83,7 @@ module Define
     end
 
     def term
-      Term.find(self.term_id)
+      Term::Word.find(self.term_id)
     end
 
     def self.find_by_term(id)

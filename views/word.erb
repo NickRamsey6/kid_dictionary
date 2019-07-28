@@ -2,16 +2,16 @@
 
 <h3>Definitions:</h3>
 
-<% if @term.definitions.any? %>
-    <ol>
-      <% @term.definitions.each do |definition| %>
-        <li><%= definition.definition %>
-        </li>
-      <% end %>
-    </ol>
-  <% else %>
-    <p>There are no definitions for this board yet.</p>
-  <% end %>
+
+  <% if @term.definitions.any? %>
+      <ol>
+        <% @term.definitions.each do |definition| %>
+          <li><a href="/terms/<%= @term.id %>/definitions/<%= definition.id %>"><%= definition.definition %></a></li>
+        <% end %>
+      </ol>
+    <% else %>
+      <p>There are no definitions for this board yet.</p>
+    <% end %>
 
 
 
