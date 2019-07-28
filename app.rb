@@ -63,9 +63,9 @@ post ('/terms/:id/definitions') do
   erb(:word)
 end
 
-patch('/terms/:id/definitions/definition_id') do
+patch('/terms/:id/definitions/:definition_id') do
   @term = Term::Word.find(params[:id].to_i())
   definition = Define::Word.find(params[:id].to_i())
-  definition.update(params[:definition])
-  erb(:definition)
+  definition.edit(params[:definition])
+  erb(:word)
 end
